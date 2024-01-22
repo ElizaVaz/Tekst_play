@@ -41,6 +41,24 @@ def homeless():
             print("Вас не поделили и теперь вы летите вниз.")
 
 
+def homik():
+    print("Вы очнулись в квартире")
+    print("+НАВЫК ДОМАШНИЙ КОТ")
+    print("Чтобы претвориться нормальным котом введите 'мяу'")
+    miv = input()
+    while miv != "мяу" and miv != "Мяу":
+        print("Что за кот? Попробуйте ещё раз")
+        miv = input()
+    print("Отлично! Вы вроде смышлённый.")
+    print("Теперь напишите сочинение на тему 'Я кот'.")
+    sochin = input()
+    while len(sochin) < 50:
+        print("Маловато будет...")
+        sochin = input()
+    print("Отличная ночная опера!")
+    
+
+
 
 statys = input()
 while statys != "1" and statys != "2":
@@ -49,4 +67,4 @@ while statys != "1" and statys != "2":
 if statys == "1":
     homeless()
 elif statys == "2":
-    print("Кот домашний, обыкновенный. Одна штука.")
+    homik()
