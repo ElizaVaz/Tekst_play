@@ -92,5 +92,7 @@ while statys != "1" and statys != "2":
     statys = input()
 if statys == "1":
     homeless()
+    homik()
 elif statys == "2":
     homik()
+    homeless()
