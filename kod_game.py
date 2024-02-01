@@ -8,8 +8,8 @@ print("1) быть бездомным")
 print("2) быть домашним")
 lives = 3
 
-def homeless():
-    while lives > 0:
+def homeless(live):
+    while live > 0:
         print("Достижение - ВЫ УЛИЧНЫЙ КОТ")
         print("Кот - бомжик.")
         print("Вам нечего есть.")
@@ -20,7 +20,7 @@ def homeless():
         if eda == "1":
             print("Молоко это не еда... Вы этим не наелись и поэтому вы умерли. + Молоко было просроченное.")
             print("Вы помёрли.")
-            lives = 0
+            live = 0
         elif eda == "2":
             print("Вы поймали крысу и приготовили её.")
             print("+НАВЫК ГОТОВКИ")
@@ -34,7 +34,7 @@ def homeless():
             if neda == "1":
                 print("На вас напали и вы немножко проиграли битву.")
                 print("Ну в общем - R.I.P.")
-                lives = 0
+                live = 0
             elif neda == "2":
                 print("Вы отдали еду.")
                 print("На запах прилетело ещё 2 чайки.")
@@ -49,8 +49,8 @@ def homeless():
             lives = 0
 
 
-def homik():
-    while lives > 0:
+def homik(live):
+    while live > 0:
         print("Вы очнулись в квартире")
         print("+НАВЫК ДОМАШНИЙ КОТ")
         print("Чтобы претвориться нормальным котом введите 'мяу'")
@@ -99,8 +99,8 @@ while statys != "1" and statys != "2":
     print("Но-но-но! Это как вообще? Выберете 1 или 2.")
     statys = input()
 if statys == "1":
-    homeless()
-    homik()
+    homeless(lives)
+    homik(lives)
 elif statys == "2":
-    homik()
-    homeless()
+    homik(lives)
+    homeless(lives)
