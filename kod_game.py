@@ -126,5 +126,6 @@ if statys == "1":
 elif statys == "2":
     lives = homik(lives)
     lives = homeless(lives)
-end(lives)
+if lives > 0:
+    end(lives)
 input()
