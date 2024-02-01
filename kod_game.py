@@ -9,8 +9,8 @@ print("1) быть бездомным")
 print("2) быть домашним")
 lives = 3
 
-def homeless(live):
-    if live > 0:
+def homeless(lives):
+    if lives > 0:
         print("Достижение - ВЫ УЛИЧНЫЙ КОТ")
         print("Кот - бомжик.")
         print("Вам нечего есть.")
@@ -22,7 +22,7 @@ def homeless(live):
             print("Молоко это не еда... Вы этим не наелись и поэтому вы умерли. ", end="")
             print("+ Молоко было просроченное.")
             print("Вы помёрли.")
-            live = 0
+            lives = 0
         elif eda == "2":
             print("Вы поймали крысу и приготовили её.")
             print("+НАВЫК ГОТОВКИ")
@@ -37,7 +37,7 @@ def homeless(live):
             if neda == "1":
                 print("На вас напали и вы немножко проиграли битву.")
                 print("Ну в общем - R.I.P.")
-                live = 0
+                lives = 0
             elif neda == "2":
                 print("Вы отдали еду.")
                 print("На запах прилетело ещё 2 чайки.")
@@ -50,10 +50,11 @@ def homeless(live):
             print("Вы слишком долго думали...")
             print("You died.")
             lives = 0
+    return lives
 
 
-def homik(live):
-    if live > 0:
+def homik(lives):
+    if lives > 0:
         print("Вы очнулись в квартире")
         print("+НАВЫК ДОМАШНИЙ КОТ")
         print("Чтобы претвориться нормальным котом введите 'мяу'")
@@ -93,7 +94,7 @@ def homik(live):
         else:
             print("Вы были элегантны, поэтому вы теперь на улице с рыбкой в запазухе.")
             print("Вы были слишком шумные поэтому...")
-            print("Достижение - ВЫ ТЕПЕРЬ УЛИЧНЫЙ КОТ")
+    return lives
 
 
 statys = input()
@@ -101,8 +102,8 @@ while statys != "1" and statys != "2":
     print("Но-но-но! Это как вообще? Выберете 1 или 2.")
     statys = input()
 if statys == "1":
-    homeless(lives)
-    homik(lives)
+    lives = homeless(lives)
+    lives = homik(lives)
 elif statys == "2":
-    homik(lives)
-    homeless(lives)
+    lives = homik(lives)
+    lives = homeless(lives)
