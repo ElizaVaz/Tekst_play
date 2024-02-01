@@ -9,6 +9,7 @@ print("1) быть бездомным")
 print("2) быть домашним")
 lives = 3
 
+
 def homeless(lives):
     if lives > 0:
         print("Достижение - ВЫ УЛИЧНЫЙ КОТ")
@@ -93,9 +94,16 @@ def homik(lives):
             print("Ну что сказать... Вы теперь на улице.")
         else:
             print("Вы были элегантны, поэтому вы теперь на улице с рыбкой в запазухе.")
+            riba = 1
             print("Вы были слишком шумные поэтому...")
     return lives
 
+
+def end(lives):
+    print("Что ж, вы были и бездомным и 'домным')")
+    print("Вы научились многому!")
+    print("Посмотрим,справитесь ли вы с последним заданием.")
+    print("Сколько корней у квадратного уравнения: x^2 - 6x + 9")
 
 statys = input()
 while statys != "1" and statys != "2":
@@ -107,3 +115,4 @@ if statys == "1":
 elif statys == "2":
     lives = homik(lives)
     lives = homeless(lives)
+end(lives)
