@@ -112,6 +112,7 @@ def end(lives):
         otv = input()
     if otv == "1":
         print("Вы выйграли!")
+        print("Ураааааааааааа!")
     else:
         print("Неа, математик...")
 
