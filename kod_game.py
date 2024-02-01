@@ -104,6 +104,17 @@ def end(lives):
     print("Вы научились многому!")
     print("Посмотрим,справитесь ли вы с последним заданием.")
     print("Сколько корней у квадратного уравнения: x^2 - 6x + 9")
+    print("1) один")
+    print("2) два")
+    otv = input()
+    while otv != "1" and otv != "2":
+        print("Это мы не прохидили! Это нам не задавали")
+        print("Введите 1 или 2")
+        otv = input()
+    if otv == "1":
+        print("Вы выйграли!")
+    else:
+        print("Неа, математик...")
 
 statys = input()
 while statys != "1" and statys != "2":
@@ -116,3 +127,4 @@ elif statys == "2":
     lives = homik(lives)
     lives = homeless(lives)
 end(lives)
+input()
