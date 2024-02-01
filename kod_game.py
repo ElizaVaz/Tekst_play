@@ -10,7 +10,7 @@ print("2) быть домашним")
 lives = 3
 
 def homeless(live):
-    while live > 0:
+    if live > 0:
         print("Достижение - ВЫ УЛИЧНЫЙ КОТ")
         print("Кот - бомжик.")
         print("Вам нечего есть.")
@@ -53,7 +53,7 @@ def homeless(live):
 
 
 def homik(live):
-    while live > 0:
+    if live > 0:
         print("Вы очнулись в квартире")
         print("+НАВЫК ДОМАШНИЙ КОТ")
         print("Чтобы претвориться нормальным котом введите 'мяу'")
