@@ -15,7 +15,7 @@ while z == "1":
     lives = 1
 
 
-    def homeless(lives):
+    def homeless(lives):               # Часть жизни кота во время бездомности
         if lives > 0:
             print("Достижение - ВЫ УЛИЧНЫЙ КОТ")
             print("Кот - бомжик.")
@@ -62,7 +62,7 @@ while z == "1":
         return lives
 
 
-    def homik(lives):
+    def homik(lives):               # Часть жизни кота во время домности
         if lives > 0:
             print("Вы очнулись в квартире")
             print("+НАВЫК ДОМАШНИЙ КОТ")
